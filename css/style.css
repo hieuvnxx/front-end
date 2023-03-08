@@ -1,0 +1,214 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.present {
+    margin-top: 80px;
+}
+
+.navbar-header-wrapper {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-left-content {
+    display: flex;
+    padding-left: 36px;
+    align-items: center;
+}
+
+.navbar-header-wrapper .navbar-header {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: #111;
+}
+
+.navbar-header-wrapper .navbar-header p{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar-center-content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navbar-center-content .navbar-outer-logo {
+    display: flex;
+    height: 80px;
+    margin-left: 22px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navbar-center-content .navbar-main-content-wrapper {
+    margin-left: 18px;
+    width: 100%;
+    height: 80px;
+}
+
+.navbar-logo {
+    fill: #fff;
+}
+
+.navbar-main-content-wrapper .navbar-main-content-link-item {
+    display: inline-flex;
+    position: relative;
+    height: 80px;
+    cursor: pointer;
+}
+
+.navbar-main-content-wrapper .navbar-main-content-link-item a {
+    text-decoration: none;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navbar-main-content-wrapper .navbar-main-content-link-item p {
+    padding: 7.5px 16px;
+    margin-right: 4px;
+}
+
+.navbar-main-content-wrapper .navbar-main-content-link-item:hover p {
+    border-radius: 6.4px;
+    background-color: #2b2929;
+    -webkit-border-radius: 6.4px;
+    -moz-border-radius: 6.4px;
+    -ms-border-radius: 6.4px;
+    -o-border-radius: 6.4px;
+}
+
+.navbar-main-content-wrapper .navbar-main-content-link-item:hover .navbar-main-content-link-item-underline {
+    border-bottom: 4px solid #31a56f;
+    position: absolute;
+    bottom: 7px;
+    width: 100%;
+}
+
+.navbar-right-content {
+    display: flex;
+    align-items: center;
+    padding-right: 36px;
+}
+
+.navbar-right-content a {
+    text-decoration: none;
+}
+
+.navbar-right-content .navbar-account {
+    display: flex;
+}
+
+.navbar-right-content .navbar-account .navbar-account-item {
+    display: inline-block;
+    padding: 0 6px;
+}
+
+.navbar-right-content .navbar-account .navbar-login {
+    display: none; 
+}
+
+.navbar-right-content .navbar-account .navbar-btn-login {
+    display: inline-block; 
+    background: rgba(128,128,128,.2);
+    padding: 8px 16px;
+    border-radius: 6.4px;
+    -webkit-border-radius: 6.4px;
+    -moz-border-radius: 6.4px;
+    -ms-border-radius: 6.4px;
+    -o-border-radius: 6.4px;
+    color: #fff;
+}
+
+.navbar-right-content .navbar-account .navbar-btn-register {
+    display: inline-block;
+    background: rgb(11, 196, 226);
+    padding: 8px 16px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    color: #111;
+}
+
+.navbar-right-content .navbar-account .navbar-btn-register:hover {
+    background: rgb(18, 159, 180);
+}
+
+.arrow-right-top {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+
+
+#main-banner {
+    width: 100%;
+    position: relative;
+}
+
+.banner-cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #3d3838;
+}
+
+.video-full-width {
+    object-fit: cover;
+    object-position: center center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video-full-width-top {
+    object-fit: cover;
+    object-position: center top;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-cover-center {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    max-width: 105rem;
+    height: 55vh;
+    min-height: 31.25rem;
+    margin: 0px auto;
+}
+
+.banner-cover-center-video {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgb(7, 18, 26);
+}
