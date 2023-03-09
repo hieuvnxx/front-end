@@ -27,6 +27,7 @@ h1 {
     height: 80px;
     display: flex;
     background-color: #111;
+    color: #fff;
 }
 
 .navbar-root a {
@@ -74,6 +75,7 @@ h1 {
 
 .navbar-logo {
     fill: #fff;
+    margin-right: 4px;
 }
 
 .navbar-main-content-wrapper .navbar-main-content-link-item {
