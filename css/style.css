@@ -577,7 +577,6 @@ a.btn-more {
 }
 
 
-
 /* footer side */
 .footer-content {
     user-select: none;
@@ -592,7 +591,6 @@ a.btn-more {
 .footer-links {
     user-select: none;
     box-sizing: border-box;
-    font-family: "FF Mark W05",Arial,sans-serif;
     background: #292929;
     padding: 24px;
     margin: 0;
@@ -603,7 +601,6 @@ a.btn-more {
     text-align: center;
     text-transform: uppercase;
 }
-
 
 .footer-links ul {
     list-style: none;
@@ -627,4 +624,68 @@ a.btn-more {
 .footer-links ul li a:hover {
     background: rgba(128,128,128,.3);
     border-radius: 6.4px;
+}
+
+
+.footer-social-links {
+    padding: 18px 0;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.footer-social-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social-links ul li {
+    margin: 6px;
+    background: rgba(128,128,128,.2);
+    border-radius: 12px;
+    width: 32px;
+    height: 32px;
+}
+
+.footer-social-links ul li a {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    height: 100%;
+}
+
+.footer-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 24px 0 24px 0;
+}
+
+.footer-logos div {
+    margin: 0 20px;
+}
+
+.footer-logos img {
+    max-width: 116px;
+    max-height: 99px;
+}
+
+.footer-copy-rights {
+    margin: 0 auto;
+    max-width: 640px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 140%;
+    text-align: center;
+    word-break: keep-all;
+    color: #7e7e7e;
 }
