@@ -43,6 +43,13 @@ h1 {
 .footer-root {
     max-width: 80rem;
     margin: auto;
+    user-select: none;
+    box-sizing: border-box;
+    text-align: center;
+    color: #f9f9f9;
+    background-color: #111;
+    padding: 0px 0px 48px 0px;
+    border-top: 2px solid #343434;
 }
 
 .navbar-left-content {
@@ -161,15 +168,17 @@ h1 {
     -o-transform: rotate(-45deg);
 }
 
+#main-section_0 a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 .banner {
     box-sizing: border-box;
     position: relative;
     min-height: 31.25rem;
     padding: 3.75rem;
-}
-
-.banner a {
-    text-decoration: none;
+    user-select: none;
 }
 
 .banner-cover {
@@ -181,22 +190,6 @@ h1 {
     background-color: #3d3838;
 }
 
-.video-full-width {
-    object-fit: cover;
-    object-position: center center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.video-full-width-top {
-    object-fit: cover;
-    object-position: center top;
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
 .banner-cover-center {
     position: relative;
     z-index: 1;
@@ -204,22 +197,35 @@ h1 {
     align-items: center;
     justify-content: center;
     max-width: 105rem;
-    height: 55vh;
+    height: 31.25rem;
     min-height: 31.25rem;
     margin: 0px auto;
 }
 
-.banner-cover-center-video {
+.banner-cover-center-bg {
     position: absolute;
     left: 0px;
     top: 0px;
     width: 100%;
     height: 100%;
-    background: rgb(7, 18, 26);
+    background: rgb(255, 255, 255);
+    background-image: url(../images/backgrounds/illo-about-left.png),url(../images/backgrounds/illo-about-right.png);
+    background-repeat: no-repeat,no-repeat;
+    background-position: 0 0, 100% 0;
+    background-size: 40% auto;
+    color: #111;
 }
 
 .banner-cover-center .banner-cover-center-content {
-    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    height: 55%;
+    margin: auto;
+    text-align: center;
 }
 
 .banner-cover-center-container {
@@ -229,52 +235,7 @@ h1 {
     margin: -.7rem .7rem;
 }
 
-.banner-slogen {
-    width: 100%;
-    text-align: center;
-}
-
-.logo-slogen {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    height: 17vw;
-    max-width: 37.5rem;
-    max-height: 16.5312rem;
-}
-
-.img-logo-slogen {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.banner-join-now {
-    width: 100%;
-    margin-top: 0.625rem;
-    text-align: center;
-}
-
-.btn-join-now {
-    position: relative;
-    display: inline-block;
-    min-width: 195px;
-    height: 56px;
-    padding: 0px;
-    margin: 5px;
-    color: rgb(1, 1, 1);
-    font-size: 0.8125rem;
-    letter-spacing: 0.15em;
-    font-weight: bold;
-    background-color: transparent;
-    border: 0px;
-    text-transform: uppercase;
-}
-
-.banner-join-now .btn-join-now-bg {
+.btn-banner-cover-center {
     box-sizing: border-box;
     position: relative;
     display: flex;
@@ -282,13 +243,12 @@ h1 {
     justify-content: center;
     min-width: 195px;
     height: 56px;
-    padding: 0px 40px;
     background-color: rgb(11, 198, 227);
-}
-
-.banner-join-now .btn-join-now-container {
-    outline: 0.2px solid #fff;
+    outline: 0.2px solid #000000;
     outline-offset: 2px;  
+    color: #111;
+    font-weight: bold;
+    margin: .67rem 0;
 }
 
 @media (min-width: 600px) {
@@ -301,7 +261,7 @@ h1 {
 .featured-news {
     position: relative;
     padding-bottom: 40px;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAGQCAIAAABnC3SKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY4MzcxNUYxQTc1NzExRTk5MEJGRDA2QkQ5MkE0QTVGIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY4MzcxNUYyQTc1NzExRTk5MEJGRDA2QkQ5MkE0QTVGIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjgzNzE1RUZBNzU3MTFFOTkwQkZEMDZCRDkyQTRBNUYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjgzNzE1RjBBNzU3MTFFOTkwQkZEMDZCRDkyQTRBNUYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5246U/AAAGtklEQVR42uyb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) left top repeat-x rgb(247, 247, 247);
+    background: url(../images/backgrounds/fade_caro.png) repeat-x rgb(247, 247, 247);
 }
 
 .featured-news-wrapper {
@@ -545,15 +505,6 @@ a.btn-more {
 
 
 /* footer side */
-.footer-content {
-    user-select: none;
-    box-sizing: border-box;
-    text-align: center;
-    color: #f9f9f9;
-    background-color: #111;
-    padding: 0px 0px 48px 0px;
-    border-top: 2px solid #343434;
-}
 
 .footer-links {
     user-select: none;
@@ -593,52 +544,12 @@ a.btn-more {
     border-radius: 6.4px;
 }
 
-
-.footer-social-links {
-    padding: 18px 0;
-    user-select: none;
-    box-sizing: border-box;
-}
-
-.footer-social-links ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-social-links ul li {
-    margin: 6px;
-    background: rgba(128,128,128,.2);
-    border-radius: 12px;
-    width: 32px;
-    height: 32px;
-}
-
-.footer-social-links ul li a {
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    text-decoration: none;
-    cursor: pointer;
-    height: 100%;
-}
-
 .footer-logos {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     padding: 24px 0 24px 0;
-}
-
-.footer-logos div {
-    margin: 0 20px;
 }
 
 .footer-logos img {
