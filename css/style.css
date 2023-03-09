@@ -217,9 +217,7 @@ h1 {
     position: relative;
     z-index: 1;
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: center;
     justify-content: center;
     max-width: 105rem;
     height: 55vh;
@@ -296,9 +294,7 @@ h1 {
     box-sizing: border-box;
     position: relative;
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: center;
     justify-content: center;
     min-width: 195px;
     height: 56px;
@@ -383,15 +379,12 @@ h1 {
     margin: 0px auto;
     display: flex;
     flex-wrap: wrap;
-    -webkit-box-pack: end;
     justify-content: flex-end;
 }
 
 .featured-news-wrapper .content .content-section .content-wrapper {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
     justify-content: space-between;
     height: 200px;
     width: 100%;
@@ -413,7 +406,6 @@ h1 {
     box-sizing: border-box;
     position: relative;
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
 }
 
@@ -454,9 +446,6 @@ h1 {
     font-weight: bold;
     letter-spacing: 0.03em;
     color: rgb(26, 29, 33);
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     overflow: hidden;
 }
@@ -468,9 +457,6 @@ h1 {
     font-size: 12px;
     line-height: 1.08333;
     letter-spacing: 0.05em;
-    display: -webkit-box;
-    -webkit-line-clamp: 7;
-    -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     overflow: hidden;
 }
@@ -531,7 +517,6 @@ a.btn-more {
 
 .navbar-main-content-link-item:hover .drop-menus {
     display: block;
-    -webkit-animation: fadeIn 0.5s;
     animation: fadeIn 0.5s;
 }
 
