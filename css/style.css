@@ -303,10 +303,8 @@ h1 {
 }
 
 .banner-join-now .btn-join-now-container {
-    position: absolute;
-    inset: 0;
-    border: 0.2px solid #fff;
-    margin: -0.2rem -0.2rem;
+    outline: 0.2px solid #fff;
+    outline-offset: 2px;  
 }
 
 @media (min-width: 600px) {
@@ -342,7 +340,7 @@ h1 {
 }
 
 
-.featured-news-wrapper .title .text-container .text {
+.featured-news-wrapper .title .text-container .text * {
     padding-top: 100%;
     transform: rotate(-90deg) translate(-100%, -50%);
     transform-origin: left top;
@@ -353,7 +351,7 @@ h1 {
     font-weight: bold;
 }
 
-.featured-news-wrapper .title .text-container .text::after {
+.featured-news-wrapper .title .text-container .text *::after {
     content: "";
     display: inline-block;
     vertical-align: middle;
