@@ -11,7 +11,6 @@ h1 {
 }
 
 .navbar-root {
-    max-width: 80rem;
     position: fixed;
     z-index: 10000;
     top: 0;
@@ -37,7 +36,6 @@ h1 {
 }
 
 .footer-root {
-    max-width: 80rem;
     margin: auto;
     user-select: none;
     box-sizing: border-box;
@@ -178,9 +176,9 @@ h1 {
     user-select: none;
 }
 
-@media screen and (max-height: 450px) {
-  .banner {
-    width: 80rem;
+@media screen and (max-width: 480px) {
+  .navbar-main-content-wrapper {
+    display: none;
   }
 }
 
@@ -371,6 +369,7 @@ h1 {
     text-align: center;
     word-break: keep-all;
     color: #7e7e7e;
+    padding: 1.5rem;
 }
 
 
@@ -414,9 +413,9 @@ h1 {
 .content-wrapper-article {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 170px;
     width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .content-wrapper-article a {
@@ -426,14 +425,13 @@ h1 {
 
 .content-wrapper-article .wrapper-article {
     width: 30%;
-    height: 100%;
-    flex: 1 1 100%;
     box-sizing: border-box;
     position: relative;
     display: flex;
     align-items: center;
-    margin: 0px 1.5625rem;
+    margin: 2rem 1.5625rem;
     text-overflow: ellipsis;
+    box-shadow: 0px 4px 16px 0px rgb(0 0 0 / 20%);
 }
 
 .content-wrapper-article .wrapper-article:before {
@@ -501,9 +499,9 @@ h1 {
 
 .content-wrapper-category {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
-    height: 100%;
     justify-content: center;
     position: relative;
 }
@@ -522,8 +520,9 @@ h1 {
     box-sizing: border-box;
     position: relative;
     background-color: rgb(246, 246, 246);
-    margin: 0px 1.5625rem;
+    margin: 2rem 1.5625rem;
     text-overflow: clip;
+    box-shadow: 0px 4px 16px 0px rgb(0 0 0 / 20%);
 }
 
 .content-wrapper-category .wrapper-category:before {
@@ -548,7 +547,13 @@ h1 {
     text-transform: uppercase;
 }
 
-.navbar-expend {
+
+.navbar-expand {
+    width: 100%;
+    position: absolute;
+    background-color: #e0e0e0;
+    display: none;
+    z-index: 100;
     color: #111;
 }
 
@@ -565,15 +570,6 @@ h1 {
 .navbar-expand-header-close:hover {
     cursor: pointer;
     background-color: #453c3c;
-}
-
-.navbar-expand {
-    max-width: 80rem;
-    width: 100%;
-    position: absolute;
-    background-color: #e0e0e0;
-    display: none;
-    z-index: 100;
 }
 
 .navbar-logo-switcher-expand a:hover .navbar-logo, .navbar-logo-switcher-expand a:hover {
