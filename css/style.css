@@ -238,7 +238,11 @@ h1 {
     margin: .67rem 0;
 }
 
-.navbar-main-content-link-item .drop-menus {
+.drop-sub_menus {
+    position: relative;
+}
+
+.drop-menus {
     position: absolute;
     left: 0;
     top: 80px;
@@ -252,26 +256,17 @@ h1 {
     border-top: 2px solid #31a56f;
 }
 
-@-webkit-keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
+.drop-menus .drop-sub_menus .drop-menus {
+    left: 100%;
+    top: 0;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
-}
-
-.navbar-main-content-link-item:hover .drop-menus {
+.drop-sub_menus:hover > .drop-menus {
     display: block;
 }
 
 .navbar-main-content-link-item .drop-menus li:first-of-type {
     margin-top: 16px !important;
-}
-
-.navbar-main-content-link-item .drop-menus li {
-    margin: 5px 16px;
 }
 
 .navbar-main-content-link-item .drop-menus li:hover {
